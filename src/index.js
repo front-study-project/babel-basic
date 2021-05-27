@@ -1,9 +1,7 @@
-import { a } from './b.js'
+foo === bar;
 
-console.log(a)
+const arr = []
 
-export function add() {
-  return a * a
-}
-
-add()
+var b = 123
+var c = 456
+var d = 789

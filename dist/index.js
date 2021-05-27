@@ -1,16 +1,7 @@
-'use strict';
+foo === bar;
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.add = add;
+const arr = [];
 
-var _b = require('./b.js');
-
-console.log(_b.a);
-
-function add() {
-  return _b.a * _b.a;
-}
-
-add();
+let b = 123;
+let c = 456;
+let d = 789;
