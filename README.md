@@ -39,13 +39,15 @@
 
     **babel-core**  （编程的方式使用）
 
-## 配置Babel - presets
+## 配置Babel
 
   在前面，我们只是安装和使用babel去转义代码，但没有告诉babel**怎么**转义代码；Babel通过/建议`.babelrc`配置文件
   
+  预设更像一种`模式`,按某种模式的配置去编译代码，比如说新建一个指定公司babel版本的预设`babel-preset-manualVersion`
+
   ```js
   {
-    "presets": [], // 比如babel-preset-es2015，表示转换es6的代码
+    "presets": [],
     "plugins": []
   }
   ```
@@ -101,6 +103,41 @@
   }();
   ```
 
+## 配置Babel —— 指定自己的预设
+
+  比如一个针对特定node版本的预设
+
+  * 新建项目，遵循`babel-preset-*`命名
+  * 在项目目录新建一个package.json，指定babel的版本
+
+    ```js
+    {
+      "name": "babel-preset-my-awesome-preset",
+      "version": "1.0.0",
+      "author": "James Kyle <me@thejameskyle.com>",
+      "dependencies": {
+        "babel-preset-es2015": "^6.3.13",
+        "babel-preset-react": "^6.3.13",
+        "babel-plugin-transform-flow-strip-types": "^6.3.15"
+      }
+    }
+    ```
+  * 新建`index.js`文件导出.babelrc的内容
+
+    ```js
+    module.exports = {
+      // 当使用了该预设的项目，babel的版本都会是package.json所描述的
+      presets: [
+        require("babel-preset-es2015"),
+        require("babel-preset-react")
+      ],
+      plugins: [
+        require("babel-plugin-transform-flow-strip-types")
+      ]
+    }
+    ```
+  
+  * 发布到npm，安装，设置预设
 
 ## 相关链接
 [用户手册](https://github.com/jamiebuilds/babel-handbook/blob/master/translations/zh-Hans/user-handbook.md)
