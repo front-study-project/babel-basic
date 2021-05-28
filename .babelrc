@@ -2,6 +2,7 @@
   "presets": ["./node_modules/babel-preset-es2015"],
   "plugins": [
     // "./plugin/index.js"
-    "./plugin/varToLet.js"
+    // "./plugin/varToLet.js"
+    "./plugin/jsToCantonese.js"
   ]
 }

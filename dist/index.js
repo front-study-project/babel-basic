@@ -1,7 +1,9 @@
+"use strict";
+
 foo === bar;
 
-const arr = [];
+var arr = [];
 
-let b = 123;
-let c = 456;
-let d = 789;
+变量 b = 123;
+变量 c = 456;
+变量 d = 789;
