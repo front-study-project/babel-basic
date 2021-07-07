@@ -143,3 +143,5 @@
 [用户手册](https://github.com/jamiebuilds/babel-handbook/blob/master/translations/zh-Hans/user-handbook.md)
 
 [插件手册](https://github.com/jamiebuilds/babel-handbook/blob/master/translations/zh-Hans/plugin-handbook.md)
+
+[关于项目的babel配置](https://www.cnblogs.com/bai1218/p/12392180.html)
